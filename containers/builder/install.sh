@@ -11,5 +11,5 @@ then
         sudo pacman --noconfirm -S $@
     fi
 else
-    su build -c "yay --noconfirm -S $@"
+    yay --noconfirm -S $@
 fi
