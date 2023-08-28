@@ -10,7 +10,7 @@ RUN ./install.sh -yu
 
 # Setup build user
 RUN ./install.sh sudo
-RUN useradd --shell=/bin/sh build && usermod -L build
+RUN useradd -m --shell=/bin/sh build && usermod -L build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN echo "root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
